@@ -10,7 +10,7 @@ public class Soma_vetor {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Quantos numeros voce vai digitar?");
+        System.out.println("Quantos numeros voce vai digitar? ");
         int n = sc.nextInt();
         double[] vect = new double[n];
 
