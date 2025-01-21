@@ -1,5 +1,6 @@
 package application;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -34,5 +35,14 @@ public class CalcDataHora {
         System.out.println("pastWeekInstant = " + pastWeekInstant + "\n"
                             + "nextWeekInstant = " + nextWeekInstant);
 
+        //Duração entre datas
+        Duration t1 = Duration.between(pastWeekLDTime, D02);
+        //Duração entre datas com o tipo DateTime modificado, pois não há suporte para DT original
+        Duration t2 = Duration.between(pastWeekLDate.atStartOfDay(), D01.atStartOfDay());
+        Duration t3 = Duration.between(pastWeekInstant, D03);
+
+        System.out.println("t1 = " + t1.toDays());
+        System.out.println("t2 = " + t2.toDays());
+        System.out.println("t3 = " + t3.toDays());
     }
 }
