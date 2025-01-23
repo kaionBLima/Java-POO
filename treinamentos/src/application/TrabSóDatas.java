@@ -36,6 +36,6 @@ public class TrabSóDatas {
         System.out.println("y2 = " + sfd2.format(y2));
         System.out.println("y3 = " + sfd2.format(y3));
         System.out.println("X1 = " + x1);
-        System.out.println("X2 = " + x2 );
+        System.out.println("X2 = " + x2);
     }
 }
