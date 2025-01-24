@@ -1,4 +1,4 @@
-package application;
+package dataEhora;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -17,7 +17,7 @@ public class ConversãoDatHorParaString {
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
-        /* Para transmormar o tipo Instant para string é preciso indicar a zona do fuso horário - withZone -, nesse
+        /* Para transformar o tipo Instant para string é preciso indicar a zona do fuso horário - withZone -, nesse
          caso estou usando o do meu computador - ZoneId.systemDefault */
         DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME; // Outra forma de imprimir data e hora em string, existem mais formatos  no site
 

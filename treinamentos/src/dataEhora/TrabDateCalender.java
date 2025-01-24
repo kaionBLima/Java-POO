@@ -1,4 +1,4 @@
-package application;
+package dataEhora;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,7 +23,7 @@ public class TrabDateCalender {
 
         System.out.println("4 horas adicionadas = " + sdf.format(d));
 
-        //Agora quero saber em quanto minuto, horas, dia ou meses estava a data no devido momento em que foi registrada...
+        //Agora quero saber em qual minuto, hora, dia ou meses estava a data no devido momento em que foi registrada...
 
         int minutes = cal.get(Calendar.MINUTE);
         int hous = cal.get(Calendar.HOUR_OF_DAY);
