@@ -10,7 +10,7 @@ public class Worker {
 
     private String name;
     private WorkerLevel level;
-    private Double basSalary;
+    private Double baseSalary;
 
     private Department department;
     private List <HourContract> contracts = new ArrayList<>();
@@ -22,7 +22,7 @@ public class Worker {
     public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
         this.name = name;
         this.level = level;
-        this.basSalary = baseSalary;
+        this.baseSalary = baseSalary;
         this.department = department;
     }
 
@@ -42,12 +42,12 @@ public class Worker {
         this.level = level;
     }
 
-    public Double getBasSalary() {
-        return basSalary;
+    public Double getBaseSalary() {
+        return baseSalary;
     }
 
     public void setBasSalary(Double basSalary) {
-        this.basSalary = basSalary;
+        this.baseSalary = baseSalary;
     }
 
     public Department getDepartment() {
@@ -70,8 +70,8 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public Double income(int year, int month) {
-        double soma = basSalary;
+    public Double income(int year, int month) { //Renda do trabalhador
+        double soma = baseSalary;
         Calendar cal = Calendar.getInstance();
         for (HourContract c : contracts) {
             cal.setTime(c.getDate()); //Recebe a data registrada no calendario
