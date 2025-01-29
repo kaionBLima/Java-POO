@@ -19,9 +19,8 @@ public class ProgramWorker {
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
 
-        System.out.print("Entre com o nome do departamento: ");
+        System.out.println("Entre com o nome do departamento: ");
         String departamentName = sc.nextLine();
-        System.out.print("Entre com os dados do trabalhador: ");
         System.out.print("Name: ");
         String workerName = sc.nextLine();
         System.out.print("Level: ");
@@ -31,7 +30,7 @@ public class ProgramWorker {
 
         Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departamentName));
 
-        System.out.print("Quantos contratos este trabalhador tem? ");
+        System.out.println("Quantos contratos este trabalhador tem? ");
         int n = sc.nextInt();
 
         for (int i=0; i<n; i++) {
@@ -43,8 +42,22 @@ public class ProgramWorker {
             System.out.print("Duration(hour): ");
             int hour = sc.nextInt();
             HourContract contract = new HourContract(contracDate, valuePerHour, hour);
-            worker.addContract(contract);
+            worker.addContract(contract); //Associando contratos com os trabalhadores
         }
+
+        System.out.println();
+        System.out.print("Entre com o mês e ano para calcular a renda (MM/YYYY): ");
+        String monthAndYear = sc.next();
+        //Pegando os caracteres, convertendo-os para inteiro e guardando em uma variável mês(MM) e ano(YYYY)
+        int month = Integer.parseInt(monthAndYear.substring(0,2)); // Convertendo mês
+        int year = Integer.parseInt(monthAndYear.substring(3));
+
+        System.out.println("Name: " + worker.getName());
+        System.out.println("Department: " + worker.getDepartment().getName());
+        System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.income(year, month)));
+
+
+
         sc.close();
     }
 }
