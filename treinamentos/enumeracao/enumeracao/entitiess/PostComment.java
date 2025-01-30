@@ -1,10 +1,15 @@
 package entitiess;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class PostComment {
+
+    //private static serve para que não tenha uma copia do objeto sdf para cada Post da aplicação
+    //Esse SimpleDateFormat servirá para o toString no texto de data e hora
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     private Date moment;
     private String title;
@@ -64,5 +69,24 @@ public class PostComment {
         comments.add(comment);
     }
 
+    public void removeComment(CommentPost comment) {
+        comments.remove(comment);
+    }
+
+    /* StringBuilder é uma classe que permite criar e modificar strings de forma eficiente. Ele é utilizado quando se pretende alterar uma cadeia de caracteres sem criar um novo objeto.
+     O StringBuilder é útil quando se precisa concatenar várias cadeias de caracteres em um loop, pois evita o desperdício de memória*/
+    public String toString () {
+        StringBuilder sb = new StringBuilder();
+        sb.append(title + "\n");
+        sb.append(likes);
+        sb.append(" Likes - ");
+        sb.append(sdf.format(moment) + "\n");
+        sb.append(content + "\n");
+        sb.append("Comments:\n");
+        for (CommentPost c: comments) { //Para cada CommentPost c na lista de comentarios do post eu vou mandar esse comentario c para o StringBuilder
+            sb.append(c.getText() + "\n");
+        }
+        return sb.toString();
+    }
 
 }
