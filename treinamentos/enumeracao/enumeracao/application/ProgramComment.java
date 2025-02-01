@@ -23,6 +23,19 @@ public class ProgramComment {
         p1.addComment(c1);
         p1.addComment(c2);
 
+
+        CommentPost c3 = new CommentPost("Good night");
+        CommentPost c4 = new CommentPost("May the force be with you");
+
+        PostComment p2 = new PostComment(sdf.parse("28/07/2018 23:14:19"),
+                "Good night guys",
+                "See you tomorrow",
+                12);
+
+        p1.addComment(c3);
+        p1.addComment(c4);
+
         System.out.println(p1);
+        System.out.println(p2);
     }
 }
