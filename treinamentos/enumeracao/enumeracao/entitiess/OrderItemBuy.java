@@ -5,6 +5,8 @@ public class OrderItemBuy {
     private Integer quantity;
     private Double price;
 
+    private ProductBuy productBuy;
+
     public OrderItemBuy(){
     }
 
@@ -28,4 +30,21 @@ public class OrderItemBuy {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    public double subTotal() {
+        return quantity * price;
+    }
+
+    @Override
+    public String toString() {
+        return productBuy.getNome()
+                + ", $"
+                + String.format("%.2f", price)
+                + ", Quantity"
+                + quantity
+                + ",  Subtotal"
+                + String.format("%.2f", subTotal());
+    }
+
+
 }
