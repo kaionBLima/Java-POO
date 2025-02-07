@@ -10,9 +10,10 @@ public class OrderItemBuy {
     public OrderItemBuy(){
     }
 
-    public OrderItemBuy(Integer quantity, Double price) {
+    public OrderItemBuy(Integer quantity, Double price, ProductBuy productBuy) {
         this.quantity = quantity;
         this.price = price;
+        this.productBuy = productBuy;
     }
 
     public Integer getQuantity() {

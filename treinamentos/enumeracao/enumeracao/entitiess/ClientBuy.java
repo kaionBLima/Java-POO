@@ -9,7 +9,7 @@ public class ClientBuy {
     private String emailClient;
     private Date bithDate;
 
-    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public ClientBuy() {
     }
