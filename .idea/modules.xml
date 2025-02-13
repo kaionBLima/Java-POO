@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Java POO.iml" filepath="$PROJECT_DIR$/Java POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/enumeracao/enumeracao.iml" filepath="$PROJECT_DIR$/treinamentos/enumeracao/enumeracao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/treinamentos/heranca E polimorfismo/heranca E polimorfismo.iml" filepath="$PROJECT_DIR$/treinamentos/heranca E polimorfismo/heranca E polimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treinamentos/heranc e polimorf/heranc e polimorf.iml" filepath="$PROJECT_DIR$/treinamentos/heranc e polimorf/heranc e polimorf.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/treinamentos.iml" filepath="$PROJECT_DIR$/treinamentos/treinamentos.iml" />
     </modules>
   </component>

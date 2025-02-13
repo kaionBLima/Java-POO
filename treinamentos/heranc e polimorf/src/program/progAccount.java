@@ -1,4 +1,4 @@
-package prog_herancEpolimor;
+package program;
 import entities.Account;
 import entities.BusinessAccount;
 import entities.SavingsAccount;
@@ -10,7 +10,7 @@ public class progAccount {
         Account acc = new Account(1001,"Alex", 0.0);
         BusinessAccount abc = new BusinessAccount(1002, "Maria", 0.0, 500.00);
 
-    //Upcasting -> Converte um objeto da subclasse para superclasse
+        //Upcasting -> Converte um objeto da subclasse para superclasse
         Account acc1 = abc;
         Account acc2 = new BusinessAccount(1003, "João", 0.0, 40.00);
         Account acc3 = new SavingsAccount(1004, "Eduarda", 0.0, 0.01);
