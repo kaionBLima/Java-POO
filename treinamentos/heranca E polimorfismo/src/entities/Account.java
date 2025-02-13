@@ -4,7 +4,7 @@ public class Account {
 
     private int number;
     private String holder;
-    private double balance;
+    protected double balance;
 
     public Account() {
     }
@@ -37,5 +37,9 @@ public class Account {
 
     public void withdraw(double amount) {
         balance -= amount;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
     }
 }
