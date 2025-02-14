@@ -2,7 +2,8 @@ package entities;
 
 import java.util.function.DoubleToIntFunction;
 
-public class SavingsAccount extends Account{
+//Esse "final" evita que a classe seja herdada e se usado em um método, evita que ele seja sobreposto
+public final class SavingsAccount  extends Account{
 
     private Double interestRate;
 
