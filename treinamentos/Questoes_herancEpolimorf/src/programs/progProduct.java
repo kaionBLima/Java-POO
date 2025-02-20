@@ -5,7 +5,6 @@ import entities.Product;
 import entities.UsedProduct;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

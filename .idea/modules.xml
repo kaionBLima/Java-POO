@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Java POO.iml" filepath="$PROJECT_DIR$/Java POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/Questoes_herancEpolimorf/Questoes_herancEpolimorf.iml" filepath="$PROJECT_DIR$/treinamentos/Questoes_herancEpolimorf/Questoes_herancEpolimorf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treinamentos/classesAbstratas/classesAbstratas.iml" filepath="$PROJECT_DIR$/treinamentos/classesAbstratas/classesAbstratas.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/enumeracao/enumeracao.iml" filepath="$PROJECT_DIR$/treinamentos/enumeracao/enumeracao.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/herancaEpolimorfismo/herancaEpolimorfismo.iml" filepath="$PROJECT_DIR$/treinamentos/herancaEpolimorfismo/herancaEpolimorfismo.iml" />
       <module fileurl="file://$PROJECT_DIR$/treinamentos/treinamentos.iml" filepath="$PROJECT_DIR$/treinamentos/treinamentos.iml" />

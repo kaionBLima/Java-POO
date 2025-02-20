@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 
 public class UsedProduct extends Product{
 
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private LocalDate manufactureDate;
 
     public UsedProduct() {
