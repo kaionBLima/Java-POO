@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.exception.DomainExpetion;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +18,9 @@ public class Reservation {
     }
 
     public Reservation(Integer roomNumber, Date checkin, Date checkout) {
+        if(!checkout.after(checkin)) {
+            throw new DomainExpetion("Error in reservation: Check-out date must after check-in date");
+        }
         this.roomNumber = roomNumber;
         this.checkin = checkin;
         this.checkout = checkout;
@@ -42,17 +47,16 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS); //Tipo de conversor de tempo
     }
 
-    public String uptadeDates(Date checkin, Date checkout) {
+    public void uptadeDates(Date checkin, Date checkout) throws DomainExpetion{
 
         Date now = new Date();
         if (checkin.before(now) || checkout.before(now)) {
-            return "Error in reservation: Reservation dates uptade must be future dates";
+            throw new DomainExpetion("Error in reservation: Reservation dates uptade must be future dates"); //Usando a exceção que criei para lançar exceção
         } if(!checkout.after(checkin)) {
-            return "Error in reservation: Check-out date must after check-in date";            }
+            throw new DomainExpetion("Error in reservation: Check-out date must after check-in date");            }
 
         this.checkin = checkin;
         this.checkout = checkout;
-        return null;
     }
 
     @Override
