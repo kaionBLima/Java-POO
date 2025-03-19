@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.exception.BusinessAccountException;
+
 public class AccountBank {
 
     private Integer number;
@@ -54,6 +56,17 @@ public class AccountBank {
     }
 
     public void withdraw(double amount) {
+        validWithdraw(amount);
         balance -= amount;
     }
+
+    private void validWithdraw(double amount) {
+        if (amount > getWithdrawLimit()) {
+            throw new BusinessAccountException("Erro de saque: A quantia excede o limite de saque");
+        } if(amount > getBalance()) {
+            throw new BusinessAccountException("Erro de saque: saldo insuficiente");
+        }
+    }
 }
+
+
