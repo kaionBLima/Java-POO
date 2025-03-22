@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-//ABRINDO MANUALMENTE O ARQUIVO, DA FORMA MAIS DIFIÍCIL
+//ABRINDO O ARQUIVO DE UMA MANEIRA MAIS FÁCIL, ADCIONANDO AS VARIÁVEIS DENTRO DO BLOCO TRY
 public class FileBufferedReader {
 
     public static void main(String[] args) throws FileNotFoundException {
